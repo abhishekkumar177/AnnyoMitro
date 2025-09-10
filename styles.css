@@ -145,8 +145,9 @@ h2 {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('uploaded:abhishekkumar177/annomitro/Annomitro-58037b8c7462761dfb27c48cb9698150e182f073/Home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Home.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
