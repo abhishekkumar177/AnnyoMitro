@@ -72,4 +72,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // New GSAP Animations
+    // 1. Hero Section Animation (on page load)
+    gsap.from(".hero-content", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        delay: 0.5,
+        ease: "power3.out"
+    });
+    gsap.from(".cta-buttons a", {
+        opacity: 0,
+        y: 20,
+        stagger: 0.2,
+        duration: 0.8,
+        delay: 1,
+        ease: "power2.out"
+    });
+
+    // 2. Animate "Features" section elements on scroll
+    gsap.from(".features-section .tag, .features-section h2, .features-section .subtitle", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".features-section",
+            start: "top 80%"
+        }
+    });
+
+    // 3. Animate "Impact" section elements on scroll
+    gsap.from(".impact-section .tag, .impact-section h2, .impact-section .subtitle", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".impact-section",
+            start: "top 80%"
+        }
+    });
+    gsap.from(".image-gallery img", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".image-gallery",
+            start: "top 80%"
+        }
+    });
+    gsap.from(".call-to-action", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".call-to-action",
+            start: "top 80%"
+        }
+    });
 });
