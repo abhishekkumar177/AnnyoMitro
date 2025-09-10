@@ -145,7 +145,6 @@ h2 {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Home.jpg');
     background-size: cover;
@@ -238,41 +237,196 @@ h2 {
     font-size: 1.25rem;
 }
 
-/* Impact Stories Section */
-.impact-section {
+/* New Sections */
+.process-section {
+    background-color: #F8F9FA;
+}
+
+.process-card {
     background-color: #fff;
-}
-
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 2.5rem;
-}
-
-.image-gallery img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
     border-radius: var(--border-radius);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.05);
     box-shadow: var(--box-shadow-light);
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-.call-to-action {
+.process-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-number-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+}
+
+.process-icon img {
+    height: 60px;
+}
+
+.process-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.process-btn {
     margin-top: 3rem;
 }
 
-.call-to-action p {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+.impact-stats-section {
+    background-color: #fff;
 }
 
-/* Responsive adjustments */
+.impact-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.impact-metric-card {
+    background-color: #F8F9FA;
+    border-radius: var(--border-radius);
+    padding: 2rem 1rem;
+    box-shadow: var(--box-shadow-light);
+    text-align: center;
+}
+
+.impact-metric-card h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.impact-metric-card p {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.about-section {
+    background-color: #f0f4f0;
+}
+
+.about-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    padding: 2.5rem 1.5rem;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+.cta-banner {
+    background-image: linear-gradient(to right, #4CAF50, #2E7D32);
+    color: #fff;
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+}
+
+.cta-banner p {
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+}
+
+.cta-banner .btn-primary {
+    background-color: #fff;
+    color: #2E7D32;
+    border: none;
+}
+
+.cta-banner .btn-primary:hover {
+    background-color: #fff;
+    color: #4CAF50;
+}
+
+.cta-features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.cta-features span {
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 5%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    text-align: left;
+}
+
+.footer-about .logo-text {
+    color: #fff;
+}
+
+.footer-about p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 1rem;
+}
+
+.footer-links h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
     .main-nav {
         flex-direction: column;

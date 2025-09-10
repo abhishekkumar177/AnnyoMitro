@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // New GSAP Animations
+    gsap.registerPlugin(ScrollTrigger);
+
     // 1. Hero Section Animation (on page load)
     gsap.from(".hero-content", {
         opacity: 0,
@@ -99,41 +101,100 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out",
         scrollTrigger: {
             trigger: ".features-section",
-            start: "top 80%"
+            start: "top 80%",
+            toggleActions: "play none none none"
         }
     });
 
-    // 3. Animate "Impact" section elements on scroll
-    gsap.from(".impact-section .tag, .impact-section h2, .impact-section .subtitle", {
+    // 3. Animate new "Process" section
+    gsap.from(".process-section h2, .process-section .subtitle", {
         opacity: 0,
         y: 30,
         duration: 0.8,
         stagger: 0.2,
         ease: "power2.out",
         scrollTrigger: {
-            trigger: ".impact-section",
-            start: "top 80%"
+            trigger: ".process-section",
+            start: "top 80%",
+            toggleActions: "play none none none"
         }
     });
-    gsap.from(".image-gallery img", {
+    gsap.from(".process-card", {
         opacity: 0,
-        scale: 0.8,
+        y: 50,
+        stagger: 0.3,
         duration: 0.8,
-        stagger: 0.1,
         ease: "back.out(1.7)",
         scrollTrigger: {
-            trigger: ".image-gallery",
-            start: "top 80%"
+            trigger: ".process-card",
+            start: "top 80%",
+            toggleActions: "play none none none"
         }
     });
-    gsap.from(".call-to-action", {
+
+    // 4. Animate "Impact Stats" section
+    gsap.from(".impact-stats-section h2, .impact-stats-section .subtitle", {
         opacity: 0,
         y: 30,
         duration: 0.8,
+        stagger: 0.2,
         ease: "power2.out",
         scrollTrigger: {
-            trigger: ".call-to-action",
-            start: "top 80%"
+            trigger: ".impact-stats-section",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+    gsap.from(".impact-metric-card", {
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".impact-metric-card",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // 5. Animate "About" section
+    gsap.from(".about-section h2, .about-section .subtitle", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".about-section",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+    gsap.from(".about-card", {
+        opacity: 0,
+        y: 50,
+        stagger: 0.3,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".about-card",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    // 6. Animate "Final CTA" section
+    gsap.from(".cta-banner h2, .cta-banner p, .cta-banner a, .cta-features", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".cta-banner",
+            start: "top 80%",
+            toggleActions: "play none none none"
         }
     });
 });

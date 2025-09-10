@@ -6,6 +6,8 @@
     <title>Smart Surplus - Food Redistribution for Zero-Waste Campuses</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,9 +20,9 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#impact-stats">Impact</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li class="sign-in-link"><a href="#">Sign In</a></li>
             </ul>
@@ -68,23 +70,130 @@
         </div>
     </section>
 
-    <section id="impact" class="impact-section">
-        <p class="tag">Community Impact</p>
-        <h2>Real Impact Stories</h2>
-        <p class="subtitle">See how Smart Surplus connects surplus food with families in need, creating meaningful change in our community.</p>
-        <div class="image-gallery">
-            <img src="https://i.pinimg.com/736x/a3/ee/09/a3ee095fdba51b3503f6fa41b811564a.jpg" alt="Community impact story 1">
-            <img src="https://i.pinimg.com/1200x/60/55/79/605579608878445ba00d3fd38fbd31e1.jpg" alt="Community impact story 2">
-            <img src="https://i.pinimg.com/736x/5a/45/b6/5a45b63c8e1bca340f60ff9bd26bc3a4.jpg" alt="Community impact story 3">
-            <img src="https://i.pinimg.com/1200x/60/24/4c/60244c3f4119359705e616ee2da4ccf0.jpg" alt="Community impact story 4">
-            <img src="https://i.pinimg.com/736x/0b/af/8b/0baf8bc6414905994c28607a79ad7461.jpg" alt="Community impact story 5">
-            <img src="https://i.pinimg.com/736x/f0/59/a7/f059a74c5e28f39e429b8fcb5f77960b.jpg" alt="Community impact story 6">
+    <section id="process" class="process-section">
+        <p class="tag">How FoodSaver Works</p>
+        <h2>Simple Process, Maximum Impact</h2>
+        <p class="subtitle">Our platform simplifies the process of connecting restaurants with NGOs, ensuring surplus food reaches those who need it most.</p>
+        <div class="features-grid">
+            <div class="process-card">
+                <div class="icon-number-container">
+                    <div class="process-icon"><img src="https://www.flaticon.com/svg/static/icons/svg/883/883617.svg" alt="Restaurants Donate"></div>
+                    <span class="process-number">1</span>
+                </div>
+                <h3>Restaurants Donate</h3>
+                <p>Restaurants easily list their surplus food available for donation through our user-friendly interface.</p>
+            </div>
+            <div class="process-card">
+                <div class="icon-number-container">
+                    <div class="process-icon"><img src="https://www.flaticon.com/svg/static/icons/svg/883/883618.svg" alt="NGOs Collect"></div>
+                    <span class="process-number">2</span>
+                </div>
+                <h3>NGOs Collect</h3>
+                <p>NGOs can browse available donations and coordinate pickups, ensuring efficient food distribution.</p>
+            </div>
+            <div class="process-card">
+                <div class="icon-number-container">
+                    <div class="process-icon"><img src="https://www.flaticon.com/svg/static/icons/svg/883/883619.svg" alt="Impact is Measured"></div>
+                    <span class="process-number">3</span>
+                </div>
+                <h3>Impact is Measured</h3>
+                <p>We track the amount of food saved and meals donated, providing transparency and demonstrating the collective impact.</p>
+            </div>
         </div>
-        <div class="call-to-action">
-            <p>Join our growing community and help create more stories of hope and connection.</p>
-            <a href="#" class="btn-primary">Get Started Today</a>
+        <a href="#" class="btn-primary process-btn">Start Making Impact →</a>
+    </section>
+
+    <section id="impact-stats" class="impact-stats-section">
+        <p class="tag">Our Impact</p>
+        <h2>Real numbers from real impact across our platform</h2>
+        <div class="impact-metrics-grid">
+            <div class="impact-metric-card">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/883/883617.svg" alt="Food Saved">
+                <h3>150,000</h3>
+                <p>kg Food Saved</p>
+            </div>
+            <div class="impact-metric-card">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/883/883618.svg" alt="Meals Donated">
+                <h3>75,000</h3>
+                <p>Meals Donated</p>
+            </div>
+            <div class="impact-metric-card">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/883/883619.svg" alt="Partners">
+                <h3>200+</h3>
+                <p>Partners</p>
+            </div>
+            <div class="impact-metric-card">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/883/883620.svg" alt="Success Rate">
+                <h3>95%</h3>
+                <p>Success Rate</p>
+            </div>
         </div>
     </section>
+
+    <section id="about" class="about-section">
+        <p class="tag">About FoodSaver</p>
+        <h2>Building a Sustainable Future</h2>
+        <p class="subtitle">Born from the collaboration between Haldia Institute of Technology and the Government of West Bengal, FoodSaver represents a commitment to leveraging technology for social good and environmental sustainability.</p>
+        <div class="features-grid">
+            <div class="about-card">
+                <div class="icon-bg"><img src="https://www.flaticon.com/svg/static/icons/svg/883/883618.svg" alt="Our Mission"></div>
+                <h3>Our Mission</h3>
+                <p>To create a sustainable food ecosystem where no edible food goes to waste while ensuring those in need have access to nutritious meals.</p>
+            </div>
+            <div class="about-card">
+                <div class="icon-bg"><img src="https://www.flaticon.com/svg/static/icons/svg/883/883619.svg" alt="Our Vision"></div>
+                <h3>Our Vision</h3>
+                <p>A world where technology bridges the gap between food surplus and food insecurity, creating communities without hunger.</p>
+            </div>
+            <div class="about-card">
+                <div class="icon-bg"><img src="https://www.flaticon.com/svg/static/icons/svg/883/883620.svg" alt="Our Innovation"></div>
+                <h3>Our Innovation</h3>
+                <p>Leveraging AI and real-time matching to create the most efficient food redistribution network in the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Join thousands of restaurants and NGOs already making a difference in their communities. Start your journey towards zero food waste today.</p>
+        <a href="#" class="btn-primary">Get Started →</a>
+        <div class="cta-features">
+            <span><i class="check-icon">✓</i> No setup fees</span>
+            <span><i class="check-icon">✓</i> Instant matching</span>
+            <span><i class="check-icon">✓</i> 24/7 support</span>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="logo">
+                    <img src="Home.jpg" alt="FoodSaver Logo">
+                    <span class="logo-text">FoodSaver</span>
+                </div>
+                <p>Connecting restaurants with NGOs to minimize food waste and feed those in need. Making a sustainable future, one meal at a time.</p>
+                <p class="copyright">© 2024 Haldia Institute of Technology | Government of West Bengal</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">For Restaurants</a></li>
+                    <li><a href="#">For NGOs</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Impact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 
