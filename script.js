@@ -49,4 +49,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     animateOnScroll(galleryImages, { threshold: 0.2 });
 
+    // GSAP animation for nav bar links on hover
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#A133FF'];
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            gsap.to(link, {
+                color: randomColor,
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
+        });
+
+        link.addEventListener('mouseleave', () => {
+            gsap.to(link, {
+                color: '#666',
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
+        });
+    });
+
 });

@@ -146,7 +146,7 @@ h2 {
 
 /* Hero Section */
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('uploaded:abhishekkumar177/annomitro/Annomitro-58037b8c7462761dfb27c48cb9698150e182f073/Home.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -220,8 +220,8 @@ h2 {
 
 .icon-bg {
     background-color: #E8F5E9;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -230,7 +230,7 @@ h2 {
 }
 
 .icon-bg img {
-    height: 30px;
+    height: 50px;
 }
 
 .feature-card h3 {
