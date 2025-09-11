@@ -1,0 +1,254 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-page {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem 0;
+}
+
+.auth-left {
+    flex: 1;
+    background-color: #f7f9fc;
+    padding: 3rem;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.back-home-btn {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.auth-role-header {
+    margin-bottom: 2rem;
+}
+
+.auth-role-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.auth-role-header p {
+    color: #666;
+}
+
+.auth-benefits {
+    margin-bottom: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.benefit-item img {
+    margin-right: 1rem;
+}
+
+.auth-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    color: #333;
+}
+
+.stat-item p {
+    color: #666;
+}
+
+.auth-quote {
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #ddd;
+    padding-left: 1rem;
+}
+
+.quote-author {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-right {
+    flex: 1.2;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.auth-logo {
+    margin-bottom: 2rem;
+}
+
+.auth-logo img {
+    height: 50px;
+}
+
+.demo-access-box {
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.demo-access-box span {
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-tabs {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.auth-tab {
+    flex: 1;
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s;
+}
+
+.auth-tab.active {
+    background-color: #fff;
+    border-bottom: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.auth-form-container {
+    width: 100%;
+    display: none;
+}
+
+.auth-form-container.active {
+    display: block;
+}
+
+.role-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.role-option {
+    position: relative;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.role-option input {
+    display: none;
+}
+
+.role-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.role-option input:checked + label {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+.role-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.role-field {
+    display: none;
+}
+
+.role-field.active {
+    display: block;
+}
+
+.food-preferences span {
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem 0.5rem;
+    display: inline-block;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-footer input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .auth-page {
+        flex-direction: column;
+    }
+    .auth-left, .auth-right {
+        border-radius: 0;
+    }
+    .auth-right {
+        padding: 2rem;
+    }
+}

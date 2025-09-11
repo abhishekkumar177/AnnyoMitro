@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Surplus - Create Account</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+    <main class="auth-page">
+        <div class="auth-left">
+            <a href="#" class="back-home-btn">← Back to Home</a>
+            <div class="auth-role-header">
+                <img id="role-icon" src="image_b465c0.png" alt="Role Icon">
+                <h2 id="role-title">Join as Restaurant</h2>
+                <p id="role-subtitle">Reduce food waste and help your community</p>
+            </div>
+            <div class="auth-benefits">
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/20/4CAF50" alt="Check">
+                    <p>List surplus food instantly</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/20/4CAF50" alt="Check">
+                    <p>Connect with local NGOs</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/20/4CAF50" alt="Check">
+                    <p>Track your environmental impact</p>
+                </div>
+                <div class="benefit-item">
+                    <img src="https://via.placeholder.com/20/4CAF50" alt="Check">
+                    <p>Automated notifications</p>
+                </div>
+            </div>
+            <div class="auth-stats">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Active Partners</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>Meals Saved</p>
+                </div>
+            </div>
+            <div class="auth-quote">
+                <p>"EcoPlate has made it incredibly easy for us to donate our surplus food. It's a win-win for everyone!"</p>
+                <p class="quote-author">- Sarah Chen, Restaurant Owner</p>
+            </div>
+        </div>
+
+        <div class="auth-right">
+            <div class="auth-logo">
+                <img src="https://via.placeholder.com/50" alt="EcoPlate Logo">
+                <h2>Welcome to EcoPlate</h2>
+                <p>Join the fight against food waste</p>
+            </div>
+
+            <div class="demo-access-box">
+                <p class="demo-title">Quick Demo Access</p>
+                <p>Restaurant Demo: <span>restaurant@example.com</span></p>
+                <p>NGO Demo: <span>ngo@example.com</span></p>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="sign-in">Sign In</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+
+            <div id="sign-in" class="auth-form-container active">
+                <h3>Welcome Back</h3>
+                <p>Sign in to your account to continue</p>
+                <form class="auth-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn-primary">Sign In →</button>
+                </form>
+            </div>
+
+            <div id="register" class="auth-form-container">
+                <h3>Create Account</h3>
+                <p>Join our community and start making an impact</p>
+                <div class="role-selector">
+                    <div class="role-option" data-role="restaurant">
+                        <input type="radio" name="role" id="role-restaurant" value="restaurant" checked>
+                        <label for="role-restaurant">
+                            <span class="role-icon">🍴</span>
+                            Restaurant
+                        </label>
+                    </div>
+                    <div class="role-option" data-role="ngo">
+                        <input type="radio" name="role" id="role-ngo" value="ngo">
+                        <label for="role-ngo">
+                            <span class="role-icon">❤️</span>
+                            NGO
+                        </label>
+                    </div>
+                    <div class="role-option" data-role="donor">
+                        <input type="radio" name="role" id="role-donor" value="donor">
+                        <label for="role-donor">
+                            <span class="role-icon">🎁</span>
+                            Donor
+                        </label>
+                    </div>
+                    <div class="role-option" data-role="receiver">
+                        <input type="radio" name="role" id="role-receiver" value="receiver">
+                        <label for="role-receiver">
+                            <span class="role-icon">🤲</span>
+                            Receiver
+                        </label>
+                    </div>
+                </div>
+
+                <form class="auth-form">
+                    <input type="text" id="full-name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="password" id="password" placeholder="Create a strong password" required>
+                    <input type="password" id="confirm-password" placeholder="Confirm password" required>
+
+                    <input type="text" id="org-name" class="role-field restaurant donor" placeholder="Organization Name">
+                    <input type="text" id="org-type" class="role-field restaurant donor" placeholder="Organization Type">
+
+                    <div class="role-field ngo receiver">
+                        <p class="role-field-label">Food Preferences</p>
+                        <div class="food-preferences">
+                            <span>Vegetarian</span>
+                            <span>Vegan</span>
+                            <span>Halal</span>
+                        </div>
+                    </div>
+
+                    <div class="role-field receiver">
+                        <input type="text" id="student-id" placeholder="Student ID">
+                    </div>
+
+                    <div class="role-field ngo receiver">
+                        <div class="role-field-label">I represent an NGO</div>
+                        <input type="checkbox">
+                    </div>
+                    
+                    <div class="form-footer">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Create Account →</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="reg.js"></script>
+</body>
+</html>
