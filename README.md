@@ -1,171 +1,234 @@
-## 🚀 Features
+# 🥗 FoodSaver — Smart Food Management & Donation Platform
 
-- **Modern React Architecture**: Built with React 18, React Router, and modern JavaScript
-- **Responsive Design**: Mobile-first approach with CSS Grid and Flexbox
-- **Interactive Components**: Typewriter animations, form handling, and dynamic content
-- **Multi-page Application**: Complete routing with dedicated pages for different user types
-- **Form Validation**: Client-side form validation with user feedback
-- **Accessibility**: ARIA labels and semantic HTML structure
+> 🌍 **An Open Source Full-Stack Project under Social Winter of Code 2025**  
+> Empowering communities to reduce food waste and connect donors with NGOs through modern web technologies.
 
-## 📋 Pages
+---
 
-- **Home**: Landing page with hero section, stats, how it works, and testimonials
-- **About**: Information about the organization, mission, and team
-- **How It Works**: Detailed explanation of the platform process
-- **For Restaurants**: Dedicated page for restaurant information and benefits
-- **For NGOs**: Dedicated page for NGO information and benefits
-- **Registration**: Organization registration form
-- **Contact**: Contact information and contact form
+## 🚀 Overview
 
-## 🛠️ Technologies Used
+**FoodSaver** is a full-stack web platform designed to minimize food waste by connecting **restaurants**, **NGOs**, and **donors**.  
+It allows organizations to register, donate surplus food, track expiry dates, and collaborate seamlessly — all while learning real-world **web development**, **database management**, and **API integration** skills.
 
-- **React 18**: Modern React with hooks and functional components
-- **React Router DOM**: Client-side routing
-- **CSS3**: Custom styling with CSS variables and modern layout techniques
-- **JavaScript ES6+**: Modern JavaScript features
-- **HTML5**: Semantic HTML structure
+Built using a hybrid stack of **HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB**, and **Spring Boot**, this project blends modern JavaScript technologies with enterprise-level backend reliability.
 
-## 📦 Installation
+---
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd foodsaver-app
-   ```
+## 🎯 Mission
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+> To create a sustainable and tech-driven solution for food wastage, while fostering open-source learning and collaboration.
 
-3. **Start the development server**:
-   ```bash
-   npm start
-   ```
+### Core Objectives:
+- Reduce global food waste through digital coordination.
+- Encourage restaurants and NGOs to work collaboratively.
+- Provide hands-on development exposure for contributors.
+- Promote social good through technology.
 
-4. **Open your browser** and navigate to `http://localhost:3000`
+---
 
-## 🏗️ Project Structure
+## 🧩 Features
 
-```
-foodsaver-app/
-├── public/
-│   ├── images/          # Static images and logos
-│   └── index.html       # Main HTML file
-├── src/
-│   ├── components/      # Reusable React components
-│   │   ├── Header.js    # Navigation header
-│   │   └── Footer.js    # Footer component
-│   ├── pages/           # Page components
-│   │   ├── Home.js      # Landing page
-│   │   ├── About.js     # About page
-│   │   ├── Works.js     # How it works page
-│   │   ├── Restaurant.js # Restaurant page
-│   │   ├── NGO.js       # NGO page
-│   │   ├── Registration.js # Registration form
-│   │   └── Contact.js   # Contact page
-│   ├── hooks/           # Custom React hooks
-│   │   └── useTypewriter.js # Typewriter animation hook
-│   ├── utils/           # Utility functions
-│   ├── App.js           # Main App component
-│   ├── App.css          # Global styles
-│   └── index.js         # Application entry point
-├── package.json         # Dependencies and scripts
-└── README.md           # Project documentation
-```
+### 🌐 Frontend (React + HTML, CSS, JS)
+- **Modern React 18 Architecture**
+- **Responsive Design** with CSS Grid & Flexbox
+- **Dynamic Routing** using React Router
+- **Reusable Components** for modular scalability
+- **Accessibility Ready** with ARIA roles and semantic HTML
+- **Form Validation & Alerts** using JavaScript hooks
+
+### ⚙️ Backend (Node.js + Express + Spring Boot)
+- **RESTful APIs** for data handling and authentication
+- **Spring Boot Microservices** for modular scalability
+- **MongoDB Atlas** integration for data persistence
+- **Secure API Design** with JWT authentication
+- **Cross-Origin Configuration (CORS)** enabled for React frontend
+
+### 🧠 Additional Features
+- Real-time donation status tracking
+- Typewriter animations and smooth UI transitions
+- Multi-user registration (Restaurant / NGO / Admin)
+- Contact form with backend mail integration
+- Sustainable design system with light/dark mode toggle
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Purpose |
+|--------|-------------|----------|
+| **Frontend** | HTML5, CSS3, JavaScript (ES6+), React 18 | Responsive and interactive UI |
+| **Routing** | React Router DOM | SPA navigation |
+| **Styling** | CSS Grid, Flexbox, CSS Variables | Consistent and clean layout |
+| **Backend (JS)** | Node.js + Express.js | REST API and middleware handling |
+| **Backend (Java)** | Spring Boot | Microservice integration for future scalability |
+| **Database** | MongoDB Atlas | NoSQL database for user and donation data |
+| **Auth & Security** | JWT, Bcrypt.js | Authentication and authorization |
+| **Deployment** | Vercel (Frontend), Render/Heroku (Backend) | Cloud hosting |
+| **Version Control** | Git + GitHub | Collaboration and issue tracking |
+
+---
+
+## 🧱 Project Structure
+
+FoodSaver/
+├── client/ # React Frontend (HTML, CSS, JS)
+│ ├── public/
+│ ├── src/
+│ │ ├── components/ # Navbar, Footer, Cards, etc.
+│ │ ├── pages/ # Home, About, NGO, Restaurant
+│ │ ├── hooks/ # Custom React hooks
+│ │ ├── App.js
+│ │ ├── App.css
+│ │ └── index.js
+│ └── package.json
+│
+├── server/ # Node + Express Backend
+│ ├── models/ # Mongoose schemas
+│ ├── routes/ # API endpoints
+│ ├── controllers/ # Business logic
+│ ├── app.js
+│ ├── server.js
+│ └── package.json
+│
+├── springboot-api/ # Java Microservice Backend
+│ ├── src/main/java/com/foodsaver/
+│ │ ├── controller/ # REST controllers
+│ │ ├── service/ # Service layer
+│ │ ├── repository/ # Spring Data JPA integration
+│ │ └── model/ # Entity classes
+│ ├── src/main/resources/
+│ │ ├── application.properties
+│ └── pom.xml
+│
+└── README.md
+
+
+
+---
 
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: `#38e07b` (Green)
-- **Secondary**: `#0b0f0c` (Dark Green)
-- **Tertiary**: `#51946c` (Medium Green)
-- **Background**: `#f8fbfa` (Light Green)
-- **Card Background**: `#e8f2ec` (Very Light Green)
-- **Border**: `#daeded` (Light Border)
+| Role | Color | Hex |
+|------|--------|-----|
+| Primary | Green | `#38e07b` |
+| Secondary | Dark Green | `#0b0f0c` |
+| Accent | Mint | `#51946c` |
+| Background | Light | `#f8fbfa` |
+| Card Background | `#e8f2ec` |
+| Border | `#daeded` |
 
 ### Typography
-- **Primary Font**: Work Sans
-- **Secondary Font**: Noto Sans
-- **Font Weights**: 400, 500, 700, 900
+- **Primary Font:** Work Sans  
+- **Secondary Font:** Noto Sans  
+- **Weights:** 400, 500, 700, 900  
 
-## 🔧 Available Scripts
+---
 
-- `npm start`: Runs the app in development mode
-- `npm test`: Launches the test runner
-- `npm run build`: Builds the app for production
-- `npm run eject`: Ejects from Create React App (not recommended)
+## ⚡ Installation Guide
 
-## 📱 Responsive Design
+### 🧩 Prerequisites
+Ensure you have installed:
+- Node.js ≥ v18  
+- npm ≥ v9  
+- MongoDB Atlas account  
+- Java JDK ≥ 17 (for Spring Boot backend)
 
-The application is fully responsive and works on:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
+---
 
-## 🌟 Key Features
+### 🧰 Steps
 
-### Typewriter Animation
-Custom hook that creates a typewriter effect for dynamic text display on the home page.
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/abhishekkumar177/FoodSaver.git
+cd FoodSaver
 
-### Form Handling
-- Registration form with validation
-- Contact form with submission feedback
-- Form state management with React hooks
+# 2️⃣ Install frontend dependencies
+cd client
+npm install
 
-### Navigation
-- Active link highlighting
-- Responsive navigation menu
-- Smooth transitions between pages
+# 3️⃣ Start frontend
+npm start
 
-### Interactive Elements
-- Hover effects on buttons and links
-- Loading states for form submissions
-- Responsive image galleries
+# 4️⃣ Install backend dependencies
+cd ../server
+npm install
 
+# 5️⃣ Run backend server
+node server.js
 
-
-
-
-
+# 6️⃣ (Optional) Run Spring Boot microservice
+cd ../springboot-api
+mvn spring-boot:run
 
 
+Future Enhancements
+
+🔒 Role-based authentication (Admin, NGO, Restaurant)
+
+🌐 Global map-based food pickup coordination
+
+🧾 AI-powered expiry prediction model (using TensorFlow.js)
+
+📦 Integration with Google Maps API
+
+🌙 Dark mode and accessibility improvements
+
+🤝 Contribution Guide
+
+We welcome contributions from beginners to advanced developers!
+Follow these steps to get started:
+
+Fork this repo
+
+Clone your fork
+
+Create a new branch (feature/your-feature-name)
+
+Commit & Push your changes
+
+Open a Pull Request with a clear description
+
+Please refer to CONTRIBUTING.md
+ for detailed guidelines.
+
+🧩 Issue Levels for SWoC/WOCS
+Label	Description	Example
+level 1	HTML/CSS/JS beginner tasks	Adjust navbar, fix responsive layout
+level 2	React or Express-level work	Add new page, connect form to API
+level 3	Full-stack integration	Build Spring Boot microservice or JWT auth
+📢 Communication
+
+🗨️ Join our Discord Server
+ for contributor discussions
+
+🧑‍🏫 Mentorship available during Social Winter of Code 2025
+
+🪶 Stay updated with #SWoC2025 #FoodSaver #OpenSource
+
+🪶 License
+
+Licensed under the MIT License — free to use and modify with attribution.
+
+✨ Acknowledgements
+
+Social Winter of Code (WOCS) 2025 for providing a collaborative platform.
+
+All contributors and mentors supporting this initiative.
+
+Open-source community for fostering shared learning.
+
+🌟 “Save Food, Share Hope, Build a Better Tomorrow.”
+
+— Team FoodSaver | Full Stack Edition (MERN + Spring Boot)
 
 
+---
 
-
-
-
-
-
-
-
-
-
-
-foodsaver-app/
-├── public/
-│   ├── images/          # Static images and logos
-│   └── index.html       # Main HTML file
-├── src/
-│   ├── components/      # Reusable React components
-│   │   ├── Header.js    # Navigation header
-│   │   └── Footer.js    # Footer component
-│   ├── pages/           # Page components
-│   │   ├── Home.js      # Landing page
-│   │   ├── About.js     # About page
-│   │   ├── Works.js     # How it works page
-│   │   ├── Restaurant.js # Restaurant page
-│   │   ├── NGO.js       # NGO page
-│   │   ├── Registration.js # Registration form
-│   │   └── Contact.js   # Contact page
-│   ├── hooks/           # Custom React hooks
-│   │   └── useTypewriter.js # Typewriter animation hook
-│   ├── utils/           # Utility functions
-│   ├── App.js           # Main App component
-│   ├── App.css          # Global styles
-│   └── index.js         # Application entry point
-├── package.json         # Dependencies and scripts
-└── README.md           # Project documentation
-
+## 💬 Summary
+This README:
+- ✅ Clearly positions *FoodSaver* as a **hybrid full-stack open-source project**  
+- ✅ Mentions **both Java (Spring Boot)** and **JavaScript (MERN)**  
+- ✅ Uses **standard open-source documentation format** (for SWoC/WOCS)
+- ✅ Is ready for **GitHub repository use & project submission**
 
