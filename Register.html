@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Interactivity Food Waste Dashboard</title>
+    <link rel="stylesheet" href="reg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="split-layout">
+        <aside class="marketing-panel">
+            <h1 class="h1-text fade-in">Join the fight against food waste.</h1>
+            <ul id="left-features" class="feature-list">
+                <li class="feature-item slide-up-fade"><i data-feather="truck" aria-hidden="true" class="icon-primary"></i> Browse available food donations</li>
+                <li class="feature-item slide-up-fade"><i data-feather="clock" aria-hidden="true" class="icon-primary"></i> Schedule pickups efficiently</li>
+                <li class="feature-item slide-up-fade"><i data-feather="bar-chart-2" aria-hidden="true" class="icon-primary"></i> Impact reporting and analytics</li>
+                <li class="feature-item slide-up-fade"><i data-feather="shield" aria-hidden="true" class="icon-primary"></i> Secure and easy to use platform</li>
+            </ul>
+        </aside>
+
+        <main class="registration-panel">
+            <div class="card form-card fade-in">
+                <h2 class="h2-text">Get Started</h2>
+                <p class="text-secondary body-text">Choose your role to create an account.</p>
+
+                <div id="role-selector" class="role-selector" role="radiogroup" aria-label="Select your role">
+                    <button class="role-card" data-role="restaurant" role="radio" aria-checked="false" aria-label="Restaurant, Donate surplus food">
+                        <div class="icon-container"><i data-feather="chef" aria-hidden="true"></i></div>
+                        <span class="role-title">Restaurant</span>
+                        <span class="role-subtitle">Donate surplus food</span>
+                    </button>
+                    <button class="role-card" data-role="ngo" role="radio" aria-checked="false" aria-label="NGO, Receive donations">
+                        <div class="icon-container"><i data-feather="heart" aria-hidden="true"></i></div>
+                        <span class="role-title">NGO</span>
+                        <span class="role-subtitle">Receive donations</span>
+                    </button>
+                </div>
+                
+                <form id="register-form" class="register-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required aria-describedby="fullNameError" aria-label="Full name">
+                        <span id="fullNameError" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required aria-describedby="emailError">
+                        <span id="emailError" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required aria-describedby="passwordError passwordRules">
+                        <div class="password-meter-container">
+                            <div id="password-meter" class="password-meter"></div>
+                        </div>
+                        <div id="passwordRules" class="password-rules caption-text text-secondary">
+                            Must be at least 8 characters and contain:
+                            <ul>
+                                <li data-rule="min">8 characters</li>
+                                <li data-rule="upper">uppercase letter</li>
+                                <li data-rule="lower">lowercase letter</li>
+                                <li data-rule="number">number</li>
+                                <li data-rule="special">special character</li>
+                            </ul>
+                        </div>
+                        <span id="passwordError" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required aria-describedby="confirmPasswordError">
+                        <span id="confirmPasswordError" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+
+                    <div class="form-group conditional-fields" data-role="ngo">
+                        <label class="block-label">Food Preferences</label>
+                        <div id="foodPreferences" class="chips-container">
+                            <button type="button" class="chip" data-value="vegetarian" aria-pressed="false">Vegetarian</button>
+                            <button type="button" class="chip" data-value="vegan" aria-pressed="false">Vegan</button>
+                            <button type="button" class="chip" data-value="halal" aria-pressed="false">Halal</button>
+                            <button type="button" class="chip" data-value="gluten-free" aria-pressed="false">Gluten-free</button>
+                            <button type="button" class="chip" data-value="dairy-free" aria-pressed="false">Dairy-free</button>
+                            <button type="button" class="chip" data-value="any" aria-pressed="false">Any</button>
+                        </div>
+                    </div>
+
+                    <div class="terms-line caption-text text-secondary">
+                        By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                    </div>
+
+                    <button type="submit" id="create-account-btn" class="button-primary">Create Account</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div id="success-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h3 id="modal-title">Account Created!</h3>
+            <p>Your account has been successfully created. Please check your email to verify your account and continue.</p>
+            <div class="modal-actions">
+                <button class="button-primary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="reg.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+:root {
+    --primary-gradient: linear-gradient(90deg, #6A5CFF 0%, #4DD1FF 100%);
+    --accent-purple: #6A5CFF;
+    --accent-teal: #4DD1FF;
+    --accent-pink: #FF74B1;
+    --success-green: #12B76A;
+    --muted-gray: #F4F7FB;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --card-bg: #FFFFFF;
+    --surface: #FBFDFF;
+    --outline: #E6EEF9;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 32px;
+    --spacing-8: 40px;
+    --card-shadow: 0 6px 18px rgba(12, 18, 31, 0.06);
+    --modal-shadow: 0 20px 40px rgba(12, 18, 31, 0.12);
+    --font-inter: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--surface);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-6);
+}
+
+a {
+    color: var(--accent-purple);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Typography */
+h1, .h1-text {
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+}
+h2, .h2-text {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+}
+p, .body-text {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+}
+.caption-text {
+    font-size: 13px;
+    font-weight: var(--font-weight-regular);
+}
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+/* Layout */
+.split-layout {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    min-height: 800px;
+}
+
+.marketing-panel {
+    flex: 1;
+    background: var(--primary-gradient);
+    color: var(--card-bg);
+    padding: var(--spacing-8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.marketing-panel h1 {
+    margin-bottom: var(--spacing-7);
+    color: var(--card-bg);
+}
+
+.registration-panel {
+    flex: 1;
+    padding: var(--spacing-8) var(--spacing-7);
+    overflow-y: auto;
+}
+
+/* Card & Form */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-md);
+    padding: 0;
+}
+
+.form-card > h2 {
+    margin-bottom: var(--spacing-2);
+}
+.form-card > p {
+    margin-bottom: var(--spacing-6);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-6);
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-2);
+    color: var(--text-primary);
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+    width: 100%;
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--outline);
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    color: var(--text-primary);
+    background-color: var(--muted-gray);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.09s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(106, 92, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: var(--accent-pink);
+}
+
+input.is-valid {
+    border-color: var(--success-green);
+}
+
+.error-message {
+    font-size: 12px;
+    color: var(--accent-pink);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+input:invalid:not(:placeholder-shown) + .error-message,
+.error-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.terms-line {
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+}
+
+/* Buttons */
+.button-primary {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-4) var(--spacing-6);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    color: var(--card-bg);
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: transform 0.12s, box-shadow 0.12s, opacity 0.3s;
+}
+
+.button-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(106, 92, 255, 0.2);
+}
+
+.button-primary:disabled {
+    background: var(--outline);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Role Selector */
+.role-selector {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+}
+
+.role-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--muted-gray);
+    border: 2px solid var(--outline);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-6);
+    cursor: pointer;
+    transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.2s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 10px rgba(12, 18, 31, 0.05);
+}
+
+.role-card.selected {
+    border-color: var(--accent-purple);
+    box-shadow: 0 2px 8px rgba(106, 92, 255, 0.1), var(--card-shadow);
+    transform: scale(1.005);
+}
+
+.role-card .icon-container {
+    width: 48px;
+    height: 48px;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-3);
+    border: 1px solid var(--outline);
+}
+
+.role-card .icon-container svg {
+    color: var(--accent-purple);
+    width: 24px;
+    height: 24px;
+}
+
+.role-title {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+}
+
+.role-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--spacing-7);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    color: var(--card-bg);
+    font-size: 18px;
+    margin-bottom: var(--spacing-4);
+}
+
+.feature-item .icon-primary {
+    color: var(--card-bg);
+    opacity: 0.8;
+}
+
+/* Password Meter */
+.password-meter-container {
+    height: 6px;
+    background-color: var(--outline);
+    border-radius: 3px;
+    margin-top: var(--spacing-2);
+    overflow: hidden;
+}
+
+.password-meter {
+    height: 100%;
+    width: 0;
+    background-color: var(--accent-pink);
+    border-radius: 3px;
+    transition: width 0.42s ease-out, background-color 0.2s;
+}
+
+.password-meter.weak { background-color: var(--accent-pink); }
+.password-meter.medium { background-color: var(--accent-purple); }
+.password-meter.strong { background-color: var(--success-green); }
+
+.password-rules {
+    margin-top: var(--spacing-3);
+}
+
+.password-rules ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--spacing-2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2);
+}
+
+.password-rules li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+.password-rules li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: var(--accent-pink);
+    font-size: 1.2em;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.password-rules li.valid {
+    color: var(--success-green);
+}
+.password-rules li.valid::before {
+    content: '\2713';
+    color: var(--success-green);
+}
+
+/* Multi-select Chips */
+.chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+}
+
+.chip {
+    background-color: var(--muted-gray);
+    color: var(--text-secondary);
+    border: 1px solid var(--outline);
+    border-radius: 20px;
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(.22,.9,.32,1);
+}
+
+.chip:hover {
+    border-color: var(--accent-purple);
+    transform: scale(1.03);
+}
+
+.chip[aria-pressed="true"] {
+    background: var(--accent-purple);
+    color: var(--card-bg);
+    border-color: var(--accent-purple);
+    box-shadow: 0 2px 6px rgba(106, 92, 255, 0.2);
+}
+
+/* Responsive Behavior */
+@media (max-width: 1199px) {
+    .split-layout {
+        flex-direction: column;
+        max-width: 768px;
+        min-height: auto;
+    }
+    .marketing-panel {
+        padding: var(--spacing-6);
+        text-align: center;
+    }
+    .registration-panel {
+        padding: var(--spacing-6) var(--spacing-4);
+    }
+    .feature-list {
+        margin-top: var(--spacing-4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .split-layout {
+        border-radius: 0;
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+    body {
+        padding: 0;
+        align-items: flex-start;
+        background-color: var(--card-bg);
+    }
+    .marketing-panel {
+        padding: var(--spacing-4) var(--spacing-4) var(--spacing-2);
+    }
+    .registration-panel {
+        padding: var(--spacing-4) var(--spacing-4);
+        width: 100%;
+    }
+    h1, .h1-text {
+        font-size: 28px;
+    }
+    .role-selector {
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: var(--spacing-3);
+        padding-bottom: var(--spacing-2);
+    }
+    .role-selector::-webkit-scrollbar {
+        display: none;
+    }
+    .role-card {
+        flex: 0 0 auto;
+        min-width: 120px;
+        padding: var(--spacing-4);
+    }
+    .role-card .icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    .role-card .icon-container svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+    animation-delay: 0.08s;
+    opacity: 0;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.slide-up-fade {
+    opacity: 0;
+    animation: slideUpFade 0.4s ease-out forwards;
+}
+.slide-up-fade:nth-child(1) { animation-delay: 0.2s; }
+.slide-up-fade:nth-child(2) { animation-delay: 0.3s; }
+.slide-up-fade:nth-child(3) { animation-delay: 0.4s; }
+.slide-up-fade:nth-child(4) { animation-delay: 0.5s; }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+.form-card.shake {
+    animation: shake 0.32s cubic-bezier(.68, -.55, .27, 1.55);
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.995); }
+    to { transform: scale(1); }
+}
+.role-card.selected.animate {
+    animation: scaleUp 0.22s cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+    .fade-in, .slide-up-fade, .form-card.shake {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.modal.open {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: var(--spacing-7);
+    border-radius: var(--radius-md);
+    box-shadow: var(--modal-shadow);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.2s cubic-bezier(.2,.9,.2,1), opacity 0.2s ease-out;
+    transform: scale(0.96);
+}
+
+.modal.open .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    margin-bottom: var(--spacing-4);
+}
+.modal-content p {
+    margin-bottom: var(--spacing-6);
+    color: var(--text-secondary);
+}
