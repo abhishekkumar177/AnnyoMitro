@@ -22,3 +22,4 @@ foodsaver-app/
 │   └── index.js         # Application entry point
 ├── package.json         # Dependencies and scripts
 └── README.md           # Project documentation
+
